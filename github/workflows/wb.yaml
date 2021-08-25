@@ -1,3 +1,6 @@
 name: doit
 on: [push]
 jobs:
+  dothings:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v2
