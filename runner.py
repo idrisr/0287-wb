@@ -12,7 +12,7 @@ CONTEXT = dict(default_map={})
 @click.command(context_settings=CONTEXT, help="create a project")
 def log():
     wandb.init()
-    wandb.log({'accuracy': 2, 'loss': 2})
+    wandb.log({'accuracy': 2, 'loss': 10})
     echo("yo")
 
 
