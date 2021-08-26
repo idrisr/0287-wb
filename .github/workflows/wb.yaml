@@ -3,7 +3,8 @@ on: [push]
 jobs:
   dothings:
     runs-on: ubuntu-latest
-    env: WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
+    env: 
+      WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
     steps:
       - uses: actions/checkout@v2
       - run: pip install -e .
