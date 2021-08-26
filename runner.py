@@ -9,11 +9,6 @@ from click import echo
 CONTEXT = dict(default_map={})
 
 
-with open('env.yaml') as f:
-    for k, v in yaml.safe_load(f).items():
-        os.environ[k] = v
-
-
 @click.command(context_settings=CONTEXT, help="create a project")
 def log():
     wandb.init()
